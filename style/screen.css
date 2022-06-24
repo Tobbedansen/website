@@ -288,6 +288,13 @@ u {
   max-width: 100%;
 }
 
+.c-countdown{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .o-button-reset {
   border: none;
   margin: 0;

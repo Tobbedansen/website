@@ -5,9 +5,8 @@
   justify-content: center;
   flex-wrap: wrap;
   color: #333;
-  background-color: rgba(0, 0, 0, 0.6);
-  margin-top: 50vh;
-  padding-top: 10px;
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  padding-top: 20vh;
   border-radius: 10%;
 }
 .countDown__interval_cont {
@@ -21,6 +20,8 @@
 .countDown__interval_basic_cont {
   display: flex;
   flex-direction: column;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 .countDown__interval_basic_cont_description {
   display: flex;
@@ -38,9 +39,11 @@
   height: 1.6em;
   position: relative;
   line-height: 1.6em;
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 700;
   border-radius: 0.08em;
+  /* -webkit-filter: invert(100%);
+  filter: invert(100%); */
 }
 .countDown__digit_cont:nth-child(n + 1):not(:last-child) {
   margin-right: 0.05em;
