@@ -288,7 +288,7 @@ u {
   max-width: 100%;
 }
 
-.c-countdown{
+.c-countdown {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -426,8 +426,6 @@ u {
 .o-layout--align-content-space-between {
   align-content: space-between;
 }
-
-
 
 .c-logo {
   height: 24px;
@@ -583,6 +581,7 @@ u {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s;
+  z-index: 10;
 }
 
 .has-mobile-nav .c-mobile-nav {
