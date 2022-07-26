@@ -1,5 +1,4 @@
 const sponsors = [
-  './sponsors/formule_5/DEGROOTE_LOGO_NL-cmyk-(1)-1.png',
   './sponsors/formule_5/DUBO.png',
   './sponsors/formule_5/Garage-de-Prins-1.png',
   './sponsors/formule_5/Heyerick-logo.png',
