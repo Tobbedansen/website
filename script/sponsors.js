@@ -44,6 +44,7 @@ const sponsors = [
   './sponsors/formule_1/perfecta-1.png',
   './sponsors/formule_1/ruyck-schilderwerken.PNG',
   './sponsors/formule_1/sovilux-1.png',
+  './sponsors/formule_1/miteq.png',
   './sponsors/formule_1/pleisterwerken-lievens.jpg',
   './sponsors/formule_1/mct.png',
   './sponsors/formule_1/elle.jpg',
