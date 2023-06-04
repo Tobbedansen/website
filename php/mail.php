@@ -1,10 +1,11 @@
 <?php
 // Checks if form has been submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    function post_captcha($user_response) {
+    function post_captcha($user_response)
+    {
         $fields_string = '';
         $fields = array('secret' => '6LdkytQUAAAAAD6fmKziC1nnOPe_ibF7Rshg_DyX', 'response' => $user_response);
-        foreach ($fields as $key => $value) $fields_string.= $key . '=' . $value . '&';
+        foreach ($fields as $key => $value) $fields_string .= $key . '=' . $value . '&';
         $fields_string = rtrim($fields_string, '&');
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, 'https://www.google.com/recaptcha/api/siteverify');
@@ -19,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $res = post_captcha($_POST['g-recaptcha-response']);
     if (!$res['success']) {
         // What happens when the CAPTCHA wasn't checked
-		echo '<p>Please go back and make sure you check the security CAPTCHA box.</p><br>';
+        echo '<p>Please go back and make sure you check the security CAPTCHA box.</p><br>';
     } else {
         // If CAPTCHA is successfully completed...
         #form variables
@@ -31,11 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $to = "info@tobbedansen.be";
         $subject = "Inschrijving Tobbedansen";
         #filters out characters from email and replaces them with spaces
-        function filter_email_header($form_field) {
+        function filter_email_header($form_field)
+        {
             return preg_replace('/[\0\n\r\|\!\/\<\>\^\$\%\*\&]+/', '', $form_field);
         }
-        function create_message($voornaam, $naam, $telefoonnr, $opmerking) {
-            return $message = strval($voornaam) . " " . strval($naam) . "\r\n" . strval($telefoonnr) . "\r\n\r\nOpmerking:\r\n" . strval($opmerking);
+        function create_message($voornaam, $naam, $telefoonnr, $opmerking)
+        {
+            return strval($voornaam) . " " . strval($naam) . "\r\n" . strval($telefoonnr) . "\r\n\r\nOpmerking:\r\n" . strval($opmerking);
         };
 
 
@@ -48,20 +51,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header("Location: ../index.html");
         } else {
 ?><html>
-        <head>
-        <title>Er ging iets mis</title>
-        </head>
-        <body>
-        <h1>Er ging iets mis</h1>
-        <p>Er ging iets mis in het proces. Probeer later opnieuw.</p>
-        </body>
-        </html>
-        <?php
+
+            <head>
+                <title>Er ging iets mis</title>
+            </head>
+
+            <body>
+                <h1>Er ging iets mis</h1>
+                <p>Er ging iets mis in het proces. Probeer later opnieuw.</p>
+            </body>
+
+            </html>
+<?php
             header("Location: ../index.html");
         }
     }
-} else { 
-	echo "<script type='text/javascript'>alert('Vul de Captcha in!');</script>";
-}?>
-
-
+} else {
+    echo "<script type='text/javascript'>alert('Vul de Captcha in!');</script>";
+} ?>
