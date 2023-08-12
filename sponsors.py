@@ -3,7 +3,7 @@ from PIL import Image
 from os.path import isfile, join, isdir
 import os
 
-sponsor_dir = "./sponsors/"
+sponsor_dir = "./new_sponsors/"
 Image.MAX_IMAGE_PIXELS = 933120000
 
 
