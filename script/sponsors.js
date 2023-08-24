@@ -36,6 +36,8 @@ const sponsors = [
   './sponsors/formule_1/afsluitingen-bruyneel.jpg',
   './sponsors/formule_1/aminos.PNG',
   './sponsors/formule_1/bakkerijLarise-1.png',
+  './sponsors/formule_1/steel-outdoor.png',
+  './sponsors/formule_1/wendy-de-jaeger.png',
   './sponsors/formule_1/delbaere-de-pau.png',
   './sponsors/formule_1/elle.jpg',
   './sponsors/formule_1/locatrans.png',
